@@ -15,7 +15,7 @@ public class DD_PC_Control : MonoBehaviour
     private bool bl_climbing;
     //  Camera
     public GameObject go_PC_camera;
-    public float fl_cam_look_speed = 300;
+    public float fl_cam_look_speed = 360;
     public float fl_view_angle_limit = 60;
     public float fl_cam_distance = 5;
     // GameObjects
@@ -48,8 +48,8 @@ public class DD_PC_Control : MonoBehaviour
     private void MouseLook()
     {
         // Zoom in and out with Mouse Scroll
-      if (Input.mouseScrollDelta.y > 0 && fl_cam_distance > 0.5F) fl_cam_distance -= 0.2F;
-      if (Input.mouseScrollDelta.y < 0 && fl_cam_distance < 10) fl_cam_distance += 0.2F;
+      //  if (Input.mouseScrollDelta.y > 0 && fl_cam_distance > 0.5F) fl_cam_distance -= 0.2F;
+     //  if (Input.mouseScrollDelta.y < 0 && fl_cam_distance < 10) fl_cam_distance += 0.2F;
 
 
         if (Input.GetAxis("Mouse Y") != 0) // Has the Mouse Y changed?
