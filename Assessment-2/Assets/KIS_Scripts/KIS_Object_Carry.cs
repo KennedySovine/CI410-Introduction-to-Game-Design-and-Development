@@ -5,9 +5,8 @@ using UnityEngine;
 public class KIS_Object_Carry : MonoBehaviour
 {
     // Variables
-    public Color col_highlight = Color.yellow;
-    private Color col_original;
     public float fl_activation_distance = 2F;
+    public GameObject ammo;
     public Transform tf_pc;
     private Material mat_object;
     private bool bl_carrying = false;
@@ -16,23 +15,13 @@ public class KIS_Object_Carry : MonoBehaviour
     //Start
     private void Start(){
         if (tf_pc == null) tf_pc = GameObject.FindWithTag("Player").transform;
-        mat_object = GetComponent<Renderer>().material;
-        col_original = mat_object.color;
         //Check if RigidBody is attatched
         if (GetComponent<Rigidbody>()) bl_has_RB = true;
+        tf_pc.GetComponent<KIS_PC_Range_Attack>().enabled = false;
         
     }
 
     void Update(){
-        //activation distance?
-        if (Vector3.Distance(transform.position, tf_pc.position) < fl_activation_distance){
-            if (!bl_carrying){
-                if (mat_object.color == col_original) mat_object.color = col_highlight;
-            }
-            else{
-                mat_object.color = col_original;
-            }
-
             //Check for key press
             if (Input.GetKeyDown(KeyCode.F)){
                 if (!bl_carrying){
@@ -45,18 +34,18 @@ public class KIS_Object_Carry : MonoBehaviour
                     //Child the obejct to the PC
                     transform.parent = tf_pc;
                     bl_carrying = true;
+                    GetComponent<Slow_Rotate_Bounce>().enabled = false;
+                    ammo.SetActive(false);
+                    tf_pc.GetComponent<KIS_PC_Range_Attack>().enabled = true;
                 }
         
                 else{
                     bl_carrying = false;
                     transform.parent = null;
+                    GetComponent<Slow_Rotate_Bounce>().enabled = true;
                     if (bl_has_RB) GetComponent<Rigidbody>().isKinematic = false;
+                    tf_pc.GetComponent<KIS_PC_Range_Attack>().enabled = false;
                 }
             }
-        }
-        else if (Vector3.Distance(transform.position, tf_pc.position) < fl_activation_distance +1){
-            //Reset the color as we move away
-            mat_object.color = col_original;
-        }
     }
 }

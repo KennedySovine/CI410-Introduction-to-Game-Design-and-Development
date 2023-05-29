@@ -70,7 +70,7 @@ public class DD_PC_Control : MonoBehaviour
             if (Input.GetAxis("Mouse Y") < 0)
             {
                 _fl_rotation_angle += fl_cam_look_speed * Time.deltaTime;
-                if (_fl_current_angle + _fl_rotation_angle > fl_view_angle_limit) _fl_rotation_angle = 0;
+                if (_fl_current_angle + _fl_rotation_angle > fl_view_angle_limit + 5) _fl_rotation_angle = 0;
             }
             // Rotate Camera
             go_PC_camera.transform.Rotate(_fl_rotation_angle, 0, 0);
