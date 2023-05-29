@@ -5,7 +5,7 @@ using UnityEngine;
 public class KIS_Object_Carry : MonoBehaviour
 {
     // Variables
-    public float fl_activation_distance = 2F;
+    public float fl_activation_distance = 3F;
     public GameObject ammo;
     public Transform tf_pc;
     private Material mat_object;
@@ -23,6 +23,7 @@ public class KIS_Object_Carry : MonoBehaviour
 
     void Update(){
             //Check for key press
+            if (Vector3.Distance(transform.position, tf_pc.position) < fl_activation_distance){
             if (Input.GetKeyDown(KeyCode.F)){
                 if (!bl_carrying){
                     //stop rigidbody from moving
@@ -46,6 +47,7 @@ public class KIS_Object_Carry : MonoBehaviour
                     if (bl_has_RB) GetComponent<Rigidbody>().isKinematic = false;
                     tf_pc.GetComponent<KIS_PC_Range_Attack>().enabled = false;
                 }
+            }
             }
     }
 }

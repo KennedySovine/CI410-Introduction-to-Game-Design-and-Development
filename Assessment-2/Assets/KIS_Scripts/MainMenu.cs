@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject _pauseMenu;
-    public GameObject _pauseButton;
     public GameObject _restartButton;
     public GameObject _resumeButton;
     public GameObject _quitButton;
@@ -17,7 +16,7 @@ public class MainMenu : MonoBehaviour
     public void ResumeButton(){
         Time.timeScale = 1.0f;
         _pauseMenu.SetActive(false);
-        _pauseButton.SetActive(true);
+        Screen.lockCursor = true;
     }
     //Credited to: JScotty from https://answers.unity.com/questions/1261937/creating-a-restart-button.html
     public void RestartButton(){

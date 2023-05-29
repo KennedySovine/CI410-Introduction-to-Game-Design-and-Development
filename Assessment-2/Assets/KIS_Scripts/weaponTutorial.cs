@@ -14,10 +14,10 @@ public class weaponTutorial : MonoBehaviour
         text_panel.text = "Press [F] to pick up the Bow and Arrows.";
     }
     void Update(){
-        if (Input.GetKey(KeyCode.Mouse0)){
+        if(Input.GetKeyDown(KeyCode.F)){
             text_panel.text = "Press left click to shoot";
         }
-        else if(Input.GetKeyDown(KeyCode.F)){
+        else if (Input.GetKey(KeyCode.Mouse0)){
             Tutorial.gameObject.SetActive(false);
         }
     }
