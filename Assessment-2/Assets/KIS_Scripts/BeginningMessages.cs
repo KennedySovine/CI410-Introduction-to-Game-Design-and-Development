@@ -24,9 +24,9 @@ public class BeginningMessages : MonoBehaviour
         if (Input.GetKeyDown("space")){
             //Debug.Log(count);
             if (count  == 4){
-                Debug.Log("Check");
-                go_message_panel.SetActive(false);
+                //Debug.Log("Check");
                 canvas.SetActive(false);
+                go_message_panel.SetActive(false);
                 //PC.GetComponent<DD_PC_Control>().enabled = true;
             }
             else{
