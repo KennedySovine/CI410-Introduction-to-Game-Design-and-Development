@@ -27,6 +27,7 @@ public class BeginningMessages : MonoBehaviour
                 //Debug.Log("Check");
                 canvas.SetActive(false);
                 go_message_panel.SetActive(false);
+                canvas.SetActive(false);
                 //PC.GetComponent<DD_PC_Control>().enabled = true;
             }
             else{
