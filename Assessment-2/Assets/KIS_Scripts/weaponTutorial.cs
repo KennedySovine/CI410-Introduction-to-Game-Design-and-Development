@@ -22,6 +22,7 @@ public class weaponTutorial : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Mouse0)){
             Tutorial.gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
