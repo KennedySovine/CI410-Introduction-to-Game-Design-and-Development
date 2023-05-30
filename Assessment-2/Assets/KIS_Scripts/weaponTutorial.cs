@@ -20,9 +20,13 @@ public class weaponTutorial : MonoBehaviour
         if(weapon.GetComponent< KIS_Object_Carry>().bl_carrying){
             text_panel.text = "Press left click to shoot";
         }
-        else if (Input.GetKey(KeyCode.Mouse0)){
+        else if (Input.GetKeyDown(KeyCode.Mouse0)){;
             Tutorial.gameObject.SetActive(false);
-            Destroy(gameObject);
         }
+    }
+
+    void OnTriggerExit(Collider collision){
+        Tutorial.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
