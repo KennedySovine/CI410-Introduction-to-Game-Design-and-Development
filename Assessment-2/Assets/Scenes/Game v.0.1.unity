@@ -11973,7 +11973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7890681361681529105, guid: db00e56c4c2d3410b917842081fe6be2, type: 3}
       propertyPath: m_Name
-      value: PC (1)
+      value: PC
       objectReference: {fileID: 0}
     - target: {fileID: 7890681361681529110, guid: db00e56c4c2d3410b917842081fe6be2, type: 3}
       propertyPath: m_RootOrder
