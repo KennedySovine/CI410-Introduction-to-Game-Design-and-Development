@@ -274,11 +274,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7890681361681529110}
   - component: {fileID: 7890681361681529111}
-  - component: {fileID: 7890681361681529104}
-  - component: {fileID: 7890681361681529108}
-  - component: {fileID: 7890681361681529115}
-  - component: {fileID: 7890681361681529114}
-  - component: {fileID: 7890681361681529113}
   - component: {fileID: 7890681361681529112}
   m_Layer: 0
   m_Name: PC
@@ -323,84 +318,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7890681361681529104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7890681361681529105}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ded3c1dc701afe43b26a748247b649b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fl_speed: 6
-  fl_jump_force: 8
-  fl_gravity: 20
-  fl_rotation_rate: 360
-  fl_run_muliplier: 2
---- !u!114 &7890681361681529108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7890681361681529105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0889599605260ab4ab50a26f15836b29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fl_force: 20
---- !u!114 &7890681361681529115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7890681361681529105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c0151e6a6737b40b7c886ab8c44990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7890681361681529114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7890681361681529105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af93ca359286a844bbcf59c6890cbcfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go_projectile: {fileID: 5178757891815828056, guid: 4809d62f22e436b4d9e05b4a735884cf, type: 3}
-  fl_cooldown: 1
-  v3_fire_Position: {x: 1, y: 1, z: 1.5}
-  tf_PC_camera: {fileID: 0}
---- !u!114 &7890681361681529113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7890681361681529105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9543fce100ac1345bb29a634c3c80f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  v3_respawn_position: {x: 0, y: 0, z: 0}
-  fl_HP: 100
-  fl_max_HP: 100
-  fl_max_safe_fall_height: 5
-  fl_fall_damage: 20
-  fl_fatal_fall_height: 15
-  tf_HP_bar: {fileID: 0}
-  go_hit_text: {fileID: 0}
 --- !u!114 &7890681361681529112
 MonoBehaviour:
   m_ObjectHideFlags: 0
