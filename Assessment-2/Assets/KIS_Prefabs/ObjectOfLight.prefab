@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5829476345527457085}
   - component: {fileID: 5829476345527457084}
   - component: {fileID: 5829476345527457031}
+  - component: {fileID: 5914636164150088105}
   m_Layer: 0
   m_Name: ObjectOfLight
   m_TagString: Collectable
@@ -113,3 +114,18 @@ MonoBehaviour:
   v3_rotation: {x: 0, y: 45, z: 0}
   speed: 2
   height: 0.5
+--- !u!114 &5914636164150088105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5829476345527457087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b6514879ff2e4cb2a5ded90923b1f2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  oldColor: {fileID: 0}
+  newColor: {fileID: 0}
