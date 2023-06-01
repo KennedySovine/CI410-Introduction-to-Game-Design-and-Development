@@ -5,17 +5,6 @@ using System.Collections;
 public class Teleport : MonoBehaviour {
  
      public Transform Destination;       // Gameobject where they will be teleported to
-     public string TagList = ""; // List of all tags that can teleport
- 
-     // Use this for initialization
-     void Start () {
-         // As needed
-     }
-     
-     // Update is called once per frame
-     void Update () {
-         // As needed
-     }
  
      public void OnTriggerEnter(Collider other)
      {
