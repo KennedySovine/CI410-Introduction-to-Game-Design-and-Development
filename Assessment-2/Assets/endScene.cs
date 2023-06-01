@@ -22,6 +22,6 @@ public class endScene : MonoBehaviour
      public void RestartButton(){
         Cursor.visible = true;
         Screen.lockCursor = false;
-        SceneManager.LoadScene("Game v.0.3", LoadSceneMode.Additive);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
      }
 }
