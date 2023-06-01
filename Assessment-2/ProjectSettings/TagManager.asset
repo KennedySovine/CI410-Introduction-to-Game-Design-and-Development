@@ -7,11 +7,12 @@ TagManager:
   - Tutorial
   - Weapon
   - Ammo
+  - Collectable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Colors
   - Water
   - UI
   - 

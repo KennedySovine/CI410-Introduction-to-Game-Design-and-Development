@@ -9,7 +9,7 @@ public class KIS_Object_Carry : MonoBehaviour
     public GameObject ammo;
     public Transform tf_pc;
     private Material mat_object;
-    private bool bl_carrying = false;
+    public bool bl_carrying = false;
     private bool bl_has_RB = false;
 
     //Start

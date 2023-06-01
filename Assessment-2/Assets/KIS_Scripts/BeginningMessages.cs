@@ -12,12 +12,12 @@ public class BeginningMessages : MonoBehaviour
     private GameObject PC;
     /*float timer;
     public float delay = 5;*/
-    private string[] messages = {"You don't know why you're here, do you?", "The world has lost its color.", "No one but you can see the beauty of the world anymore.", "You must help them!"};
+    private string[] messages = {"You don't know why you're here, do you?", "The world has lost its color.", "No one can see the beauty of the world anymore.", "You must help them!"};
     void Start(){
         Screen.lockCursor = true;
         //Disable Player Control when in cutscene
-        /*PC = GameObject.FindWithTag("Player");
-        PC.GetComponent<DD_PC_Control>().enabled = false;*/
+        PC =GameObject.FindWithTag("Player");
+        PC.GetComponent<DD_PC_Control>().enabled = false;
     }
     void Update(){ 
 
@@ -25,10 +25,8 @@ public class BeginningMessages : MonoBehaviour
             //Debug.Log(count);
             if (count  == 4){
                 //Debug.Log("Check");
-                canvas.SetActive(false);
                 go_message_panel.SetActive(false);
-                canvas.SetActive(false);
-                //PC.GetComponent<DD_PC_Control>().enabled = true;
+                PC.GetComponent<DD_PC_Control>().enabled = true;
             }
             else{
                 text_panel.text = messages[count];
