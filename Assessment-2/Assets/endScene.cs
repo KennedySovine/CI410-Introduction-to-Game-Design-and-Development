@@ -15,9 +15,13 @@ public class endScene : MonoBehaviour
         PC =GameObject.FindWithTag("Player");
         go_message_panel.SetActive(true);
         PC.GetComponent<DD_PC_Control>().enabled = false;
+        Cursor.visible = true;
+        Screen.lockCursor = false;
      }
 
      public void RestartButton(){
+        Cursor.visible = true;
+        Screen.lockCursor = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
      }
 }
